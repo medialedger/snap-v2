@@ -27,12 +27,12 @@
 				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 			</div>
 			<div class="modal-body"></div>
-			<div class="modal-footer" data-turbolinks="false">
+			<div class="modal-footer">
 				<button type="button" class="btn btn-dark btn-try" data-bs-dismiss="modal">Try Again</button>
 				<% if session[:current_question] < 9 %>
-					<%= button_to "Next", quiz_index_path, method: :post, class: 'btn-next' %>
+					<%= button_to "Next", quiz_index_path, method: :post, data: {"bs-dismiss": "modal"}, class: 'btn-next' %>
 				<% else %>
-					<%= button_to "Done!", quiz_index_path, method: :post, class: 'btn-next' %>
+					<%= link_to "Done!", quiz_index_path, method: :post, data: {"bs-dismiss": "modal"}, class: 'btn-next' %>
 				<% end %>
 			</div>
 		</div>
