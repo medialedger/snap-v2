@@ -10,7 +10,7 @@ class QuizController < ApplicationController
 	def create
 		if session[:current_question] <= 9
 			session[:current_question] += 1
-			redirect_to quiz_index_path
+			redirect_to quiz_index_path, turbolinks: false
 		else
 			redirect_to root_path
 		end
