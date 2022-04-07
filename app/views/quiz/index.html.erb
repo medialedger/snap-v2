@@ -32,7 +32,7 @@
 				<% if session[:current_question] < 9 %>
 					<%= button_to "Next", quiz_index_path, method: :post, data: {"bs-dismiss": "modal"}, class: 'btn-next' %>
 				<% else %>
-					<%= link_to "Done!", quiz_index_path, method: :post, data: {"bs-dismiss": "modal"}, class: 'btn-next' %>
+					<%= button_to "Done!", quiz_index_path, method: :post, data: {"bs-dismiss": "modal"}, class: 'btn-next' %>
 				<% end %>
 			</div>
 		</div>
